@@ -65,6 +65,16 @@ a {
   background-color: white;
 }
 
+#login-container h1 {
+  border-left: 3px solid var(--color4);
+  padding-left: 0.2rem;
+}
+
+#signup-container h1 {
+  border-left: 3px solid var(--color3);
+  padding-left: 0.2rem;
+}
+
 .sign-wrapper {
   display: flex;
   flex-direction: column;
@@ -116,7 +126,7 @@ a {
 #next-step ion-icon,
 #prev-step ion-icon {
   font-size: 1.5rem;
-  padding: 1rem 1rem 0 1rem;
+  padding: 0.4rem 1rem;
   cursor: pointer;
 }
 
@@ -143,4 +153,20 @@ a {
 
 #signup-step2 {
   display: none;
+}
+
+#sign-up-btn {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+#sign-up-btn button {
+  border-radius: 1rem;
+  padding: 0.7rem 2rem;
+  background-color: var(--color2);
+  border: 0;
+  color: white;
+  width: 100%;
 }
