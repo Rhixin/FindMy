@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+  --bg-color: #f0f5f9;
+  --color1: #fdc003;
+  --color2: #019644;
+  --color3: #166adc;
+  --color4: #fc3334;
+  --color5: #f0f1f5;
+  --font-primary: "Inter", "Inter Fallback";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+body {
+  background-color: var(--bg-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  max-width: 1200px;
+  display: flex;
+  flex: 1;
+  height: 60%;
+  margin: 0 5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-weight: 400;
+}
+
+a {
+  color: var(--color3);
+  cursor: pointer;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#left-container {
+  background-image: url("../images/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border-radius: 1rem 0 0 1rem;
+  background-color: var(--color5);
+}
+
+#right-container {
+  border-radius: 0 1rem 1rem 0;
+  background-color: white;
+}
+
+#login-container h1 {
+  border-left: 3px solid var(--color4);
+  padding-left: 0.2rem;
+}
+
+#signup-container h1 {
+  border-left: 3px solid var(--color3);
+  padding-left: 0.2rem;
+}
+
+.sign-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+}
+
+.sign-wrapper.hidden {
+  display: none;
+}
+
+.input-wrapper {
+  display: flex;
+  padding: 2rem 0.5rem;
+  flex-direction: column;
+  flex: 1;
+}
+
+.input-wrapper span {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.footer {
+  text-align: center;
+}
+
+.sign-input {
+  padding: 0.8rem;
+  border-radius: 0.7rem;
+  border: none;
+  background-color: var(--color5);
+  margin-top: 0.2rem;
+}
+
+#next-step {
+  display: flex;
+  justify-content: right;
+}
+
+#prev-step {
+  display: flex;
+  justify-content: left;
+}
+
+#next-step ion-icon,
+#prev-step ion-icon {
+  font-size: 1.5rem;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+}
+
+#steps-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  opacity: 1;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  padding: 0 0.5rem;
+}
+
+#signup-step1 {
+  flex: 1;
+}
+
+#signup-step2 {
+  display: none;
+}
+
+.sign-btn {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.sign-btn button {
+  border-radius: 1rem;
+  padding: 0.7rem 2rem;
+  background-color: var(--color2);
+  border: 0;
+  color: white;
+  width: 100%;
+}

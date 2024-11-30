@@ -3,7 +3,174 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>FindMy</title>
+
+    <!-- CSS IMPORT -->
+    <link rel="stylesheet" href="css/login.css" />
+
+    <!-- ICONS IMPORT -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <section class="container" id="left-container"></section>
+      <section class="container" id="right-container">
+        <div class="sign-wrapper" id="login-container">
+          <h1>Log In</h1>
+          <div class="input-wrapper">
+            <span>
+              <label for="username">Username</label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                class="sign-input"
+                placeholder="Username"
+                required
+              />
+            </span>
+
+            <span>
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="passsword"
+                class="sign-input"
+                placeholder="Password"
+                required
+              />
+            </span>
+
+            <div class="sign-btn" id="log-in-btn">
+              <button onclick="LogIn()">Log In</button>
+            </div>
+          </div>
+          <div class="footer">
+            <p>
+              Don't Have an Account?
+              <a onclick="toggleSignUpLogIn()">Sign Up</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="sign-wrapper hidden" id="signup-container">
+          <h1>Sign Up</h1>
+          <div class="input-wrapper" id="signup-wrapper">
+            <div id="steps-wrapper">
+              <div class="step" id="signup-step1">
+                <span>
+                  <label for="firstname">First Name</label>
+                  <input
+                    type="text"
+                    name="firstname"
+                    id="firstname"
+                    class="sign-input"
+                    placeholder="First Name"
+                    required
+                  />
+                </span>
+
+                <span>
+                  <label for="lastname">Last Name</label>
+                  <input
+                    type="text"
+                    name="lastname"
+                    id="lastname"
+                    class="sign-input"
+                    placeholder="Last Name"
+                    required
+                  />
+                </span>
+
+                <span>
+                  <label for="email">Email</label>
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    class="sign-input"
+                    placeholder="john@example.com"
+                    required
+                  />
+                </span>
+
+                <div id="next-step">
+                  <ion-icon
+                    name="arrow-forward-sharp"
+                    onclick="nextStepSignUp()"
+                  ></ion-icon>
+                </div>
+              </div>
+
+              <div class="step" id="signup-step2">
+                <span>
+                  <label for="username1">Username</label>
+                  <input
+                    type="text"
+                    name="username1"
+                    id="username1"
+                    class="sign-input"
+                    placeholder="Username"
+                    required
+                  />
+                </span>
+
+                <span>
+                  <label for="password1">Password</label>
+                  <input
+                    type="password"
+                    name="password1"
+                    id="password1"
+                    class="sign-input"
+                    placeholder="Password"
+                    required
+                  />
+                </span>
+
+                <span>
+                  <label for="password2">Confirm Password</label>
+                  <input
+                    type="password"
+                    name="password2"
+                    id="password22"
+                    class="sign-input"
+                    placeholder="Password"
+                    required
+                  />
+                </span>
+
+                <div id="prev-step">
+                  <ion-icon
+                    name="arrow-back-sharp"
+                    onclick="prevStepSignUp()"
+                  ></ion-icon>
+                </div>
+
+                <div class="sign-btn" id="sign-up-btn">
+                  <button onclick="SignUp()">Sign Up</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer">
+            <p>
+              Already Have an Account?
+              <a onclick="toggleSignUpLogIn()">Log In</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+
+  <script src="js/login.js"></script>
 </html>
