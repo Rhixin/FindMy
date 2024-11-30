@@ -155,14 +155,14 @@ a {
   display: none;
 }
 
-#sign-up-btn {
+.sign-btn {
   justify-content: center;
   align-items: center;
   display: flex;
   margin-top: 0.5rem;
 }
 
-#sign-up-btn button {
+.sign-btn button {
   border-radius: 1rem;
   padding: 0.7rem 2rem;
   background-color: var(--color2);

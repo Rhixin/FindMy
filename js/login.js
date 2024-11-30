@@ -35,3 +35,11 @@ function prevStepSignUp() {
   step2.style.opacity = "0";
   step2.style.display = "none";
 }
+
+function LogIn() {
+  window.open("home.html", "_self");
+}
+
+function SignUp() {
+  window.open("home.html", "_self");
+}
